@@ -1,0 +1,151 @@
+{
+  "vscode-color-picker.languages": [
+    "python",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb",
+    "*.ttf": "ttf.preview",
+    "*.otf": "default",
+    "*.glb": "modelViewer.gltfPreview",
+    "*.obj": "3dviewer.editor"
+  },
+  "git.autofetch": true,
+  "explorer.confirmDragAndDrop": false,
+  "editor.inlineSuggest.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": true,
+    "typescriptreact": true,
+    "javascript": true,
+    "python": true,
+    "html": true,
+    "vue": true,
+    "typescript": true,
+    "javascriptreact": true,
+    "css": true,
+    "prisma": false
+  },
+  "files.exclude": {
+    "**/.git": false
+  },
+  "git.enableSmartCommit": true,
+  "gitlens.codeLens.includeSingleLineSymbols": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDelete": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "git.confirmSync": false,
+  "svelte.enable-ts-plugin": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.associations": {
+    "*.COBOL*": "cobol",
+    "*.COB*": "cobol",
+    "*.COBCOPY*": "cobol",
+    "*.COPYBOOK*": "cobol",
+    "*.COPY*": "cobol",
+    "*.PL1*": "pl1",
+    "*.PLI*": "pl1",
+    "*.INC*": "pl1",
+    "*.INCLUDE*": "pl1",
+    "*.JCL*": "jcl",
+    "*.ASM*": "hlasm",
+    "*.ASSEMBLE*": "hlasm",
+    "*.HLASM*": "hlasm",
+    "*.HLA*": "hlasm"
+  },
+  "json.schemas": [
+    {
+      "fileMatch": ["/zapp.json"],
+      "url": "file:///c%3A/Users/drew/.vscode/extensions/ibm.zopeneditor-2.0.0/resources/zapp-schema-0.0.2.json"
+    }
+  ],
+  "editor.largeFileOptimizations": false,
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontSize": 16,
+  "go.toolsManagement.autoUpdate": true,
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.folders.color": "#8aadf4",
+  "material-icon-theme.activeIconPack": "",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.detectIndentation": false,
+  "explorer.fileNesting.enabled": true,
+  "rapidapi.terminalLink.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "redhat.telemetry.enabled": false,
+  "remote.SSH.remotePlatform": {
+    "192.168.127.137": "linux",
+    "45.77.199.160": "linux",
+    "AWS-TOKYO": "linux",
+    "AWS-FASTAPI": "linux"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  },
+  "editor.accessibilitySupport": "off",
+  "editor.insertSpaces": true,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "svg.preview.mode": "svg",
+  "playwright.reuseBrowser": false,
+  "git.ignoreRebaseWarning": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "files.eol": "\n",
+  "editor.codeLensFontFamily": "JetBrainsMono Nerd Font Mono",
+  "editor.inlayHints.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "debug.console.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "notebook.output.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "glassit.alpha": 240,
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell"
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "hediet.vscode-drawio.resizeImages": null,
+  "material-icon-theme.opacity": 1,
+  "emmet.preferences": {},
+  "settingsSync.ignoredSettings": ["-emmet.extensionsPath"],
+  "workbench.settings.applyToAllProfiles": ["emmet.extensionsPath"],
+  "editor.snippetSuggestions": "top",
+  "editor.minimap.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.colorTheme": "Dracula",
+  "hediet.vscode-drawio.codeLinkActivated": false,
+  "python.missingPackage.severity": "Error",
+  "python.autoComplete.extraPaths": [],
+  "python.analysis.extraPaths": [],
+  "security.allowedUNCHosts": ["wsl.localhost"]
+}
