@@ -92,7 +92,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-eval "$(oh-my-posh init zsh --config $HOME/dev-configs/theme.omp.json)"
+eval "$(oh-my-posh init zsh --config $HOME/dev-config/theme.omp.json)"
 
 
 alias zshconfig="code ~/.zshrc"
