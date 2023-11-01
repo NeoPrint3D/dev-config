@@ -98,6 +98,7 @@ eval "$(oh-my-posh init zsh --config $HOME/dev-config/theme.omp.json)"
 alias zshconfig="code ~/.zshrc"
 alias ls="exa --icons"
 alias vim=nvim
+alias ai="docker exec -it ollama ollama run mistral"
 
 
 
@@ -134,3 +135,5 @@ load-nvmrc() {
 
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+# bun completions
+[ -s "/home/drew/.bun/_bun" ] && source "/home/drew/.bun/_bun"
