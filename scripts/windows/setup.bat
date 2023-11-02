@@ -16,7 +16,13 @@ powershell -Command "choco feature enable -n=allowGlobalConfirmation"
 
 powershell -Command "choco install git -y"
 
+powershell -Command "Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+
 :: Refresh the Path environment variable
+
+powershell -Command "refreshenv"
+
+powershell -Command "git clone https://github.com/NeoPrint3D/dev-config"
 
 
 
@@ -26,9 +32,9 @@ set /p package_type=Enter package type (full/slim):
 
 :: Copy the appropriate config file based on the package type
 if /i "%package_type%"=="full" (
-    powershell -Command "copy ~\dev-config\windows\packages-full.config ~\packages.config"
+    powershell -Command "copy ~\dev-config\windows\packages-full.config ~\dev-config\packages.config"
 ) else if /i "%package_type%"=="slim" (
-    powershell -Command "copy ~\dev-config\windows\packages-slim.config ~\packages.config"
+    powershell -Command "copy ~\dev-config\windows\packages-slim.config ~\dev-config\packages.config"
 ) else (
     echo Invalid package type. Please enter either "full" or "slim".
     goto package_type_prompt
