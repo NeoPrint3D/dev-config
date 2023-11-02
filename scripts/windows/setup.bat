@@ -6,9 +6,6 @@ powershell -Command "Set-ExecutionPolicy Bypass -Scope Process -Force"
 :: Set the security protocol to TLS 1.2 and install Chocolatey
 powershell -Command "[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
 
-:: Update the Path environment variable
-powershell -Command "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
-
 :: Enable global confirmation for Chocolatey
 powershell -Command "choco feature enable -n=allowGlobalConfirmation"
 
@@ -46,13 +43,13 @@ powershell -Command "Install-module -Name Bash"
 :: Copy the PowerShell settings file
 powershell -Command "copy ~\dev-config\windows\powershell-settings.ps1 ~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 
-:: Copy the terminal settings file for each Windows Terminal package
-for /d %%i in ("~\AppData\Local\Packages\Microsoft.WindowsTerminal_*") do (
-    powershell -Command "copy ~\dev-config\windows\terminal-settings.json "%%i"\LocalState\settings.json"
-)
+@REM :: Copy the terminal settings file for each Windows Terminal package
+@REM for /d %%i in ("~\AppData\Local\Packages\Microsoft.WindowsTerminal_*") do (
+@REM     powershell -Command "copy ~\dev-config\windows\terminal-settings.json "%%i"\LocalState\settings.json"
+@REM )
 
 :: Update the Path environment variable again
-powershell -Command "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
+@REM powershell -Command "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
 
 :: Install the Oh My Posh font
 powershell -Command "oh-my-posh font install"
