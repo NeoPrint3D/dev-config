@@ -48,7 +48,7 @@ powershell -Command "winget install JanDeDobbeleer.OhMyPosh -s winget"
 
 
 
-
+powershell -Command "refreshenv"
 
 :: Clone the dev-config repository
 
