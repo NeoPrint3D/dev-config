@@ -105,7 +105,7 @@ oh-my-posh init pwsh --config "$env:USERPROFILE\dev-config\theme.omp.json" | Inv
 # enable folder icons and enable intelisense
 Import-Module Terminal-Icons
 Import-Module PSReadLine
-Set-PSReadLineKeyHandler -Key Tab -Function AcceptSuggestion
+# Set-PSReadLineKeyHandler -Key Tab -Function AcceptSuggestion
 
 
 Import-Module Bash
