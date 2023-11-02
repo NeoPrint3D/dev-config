@@ -8,7 +8,6 @@ vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]
 
 M.ui = {
     theme = "chadracula",
-    theme_toggle = { "chadracula", "one_light" },
     changed_themes = {
       chadracula = {
         base_30 = {

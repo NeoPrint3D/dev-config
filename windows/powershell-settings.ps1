@@ -101,7 +101,7 @@ else {
 }
 
 
-oh-my-posh init pwsh --config "$env:USERPROFILE\configs\theme.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:USERPROFILE\dev-config\theme.omp.json" | Invoke-Expression
 # enable folder icons and enable intelisense
 Import-Module Terminal-Icons
 Import-Module PSReadLine
