@@ -18,9 +18,9 @@ set /p package_type=Enter package type (full/slim):
 
 :: Copy the appropriate config file based on the package type
 if /i "%package_type%"=="full" (
-    powershell -Command "copy %USERPROFILE%\dev-config\windows\packages-full.config %USERPROFILE%\packages.config"
+    powershell -Command "copy ~\dev-config\windows\packages-full.config ~\packages.config"
 ) else if /i "%package_type%"=="slim" (
-    powershell -Command "copy %USERPROFILE%\dev-config\windows\packages-slim.config %USERPROFILE%\packages.config"
+    powershell -Command "copy ~\dev-config\windows\packages-slim.config ~\packages.config"
 ) else (
     echo Invalid package type. Please enter either "full" or "slim".
     goto package_type_prompt
@@ -36,7 +36,7 @@ powershell -Command "winget install JanDeDobbeleer.OhMyPosh -s winget"
 powershell -Command "git clone https://github.com/NeoPrint3D/dev-config"
 
 :: Copy the nvim config files
-powershell -Command "copy -r %USERPROFILE%\dev-config\nvim %USERPROFILE%\AppData\Local\nvim"
+powershell -Command "copy -r ~\dev-config\nvim ~\AppData\Local\nvim"
 
 :: Install the Terminal-Icons, PSReadLine, and Bash modules
 powershell -Command "Install-module -Name Terminal-Icons"
@@ -44,11 +44,11 @@ powershell -Command "Install-module -Name PSReadLine"
 powershell -Command "Install-module -Name Bash"
 
 :: Copy the PowerShell settings file
-powershell -Command "copy %USERPROFILE%\dev-config\windows\powershell-settings.ps1 %USERPROFILE%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+powershell -Command "copy ~\dev-config\windows\powershell-settings.ps1 ~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 
 :: Copy the terminal settings file for each Windows Terminal package
-for /d %%i in ("%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_*") do (
-    powershell -Command "copy %USERPROFILE%\dev-config\windows\terminal-settings.json "%%i"\LocalState\settings.json"
+for /d %%i in ("~\AppData\Local\Packages\Microsoft.WindowsTerminal_*") do (
+    powershell -Command "copy ~\dev-config\windows\terminal-settings.json "%%i"\LocalState\settings.json"
 )
 
 :: Update the Path environment variable again
