@@ -11,8 +11,8 @@ setlocal
 
 
 echo Pushing configuration to local nvim folder...
-set "SOURCE_DIR=%UserProfile%/dev-config/nvim/lua/custom"
-set "TARGET_DIR=%UserProfile%/AppData/Local/nvim/lua/custom"
+set "SOURCE_DIR=%UserProfile%/dev-config/nvim"
+set "TARGET_DIR=%UserProfile%/AppData/Local/nvim"
 
 if exist "%TARGET_DIR%" (
     echo Folder "%TARGET_DIR%" already exists.
@@ -28,7 +28,7 @@ endlocal
 
 
 
-echo Pushing PowerShell settings to local nvim folder...
+echo Pushing PowerShell setting...
 set "SOURCE_DIR=%UserProfile%/dev-config/windows/powershell-settings.ps1"
 set "TARGET_DIR=%UserProfile%/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1"
 
@@ -45,7 +45,7 @@ echo Operation completed.
 endlocal
 
 
-echo Pushing PowerShell settings to local nvim folder...
+echo Pushing PowerShell settings...
 set "SOURCE_DIR=%UserProfile%/dev-config/windows/powershell-settings.ps1"
 set "TARGET_DIR=%UserProfile%/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
 
