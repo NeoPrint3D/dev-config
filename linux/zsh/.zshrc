@@ -4,7 +4,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export NVM_DIR="$HOME/.nvm"
-source "$HOME/.cargo/env"
 
 
 Blue() {
@@ -91,7 +90,7 @@ plugins=(
     zsh-autosuggestions
     )
 
-
+source $ZSH/oh-my-zsh.sh
 
 eval "$(oh-my-posh init zsh --config $HOME/dev-config/theme.omp.json)"
 
@@ -100,9 +99,9 @@ alias zshconfig="code ~/.zshrc"
 alias ls="exa --icons"
 alias vim=nvim
 alias ai="docker exec -it ollama ollama run mistral"
-alias macos="bash ~/Programs/VirtualMachines/OSX-KVM/OpenCore-Boot.sh"
-alias windows="bash ~/Programs/VirtualMachines/OSX-KVM/boot-windows.sh"
-alias config="vim ~/dev-config/linux/zsh/.zshrc"
+
+
+
 # I want tab to auto complete with out having to hit enter
 
 bindkey '\t' autosuggest-accept
@@ -138,10 +137,4 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 # bun completions
 [ -s "/home/drew/.bun/_bun" ] && source "/home/drew/.bun/_bun"
-
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-
-
-fpath+=${ZDOTDIR:-~}/.zsh_functions
+. "$HOME/.cargo/env"
