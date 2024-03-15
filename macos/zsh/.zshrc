@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export NVM_DIR="$HOME/.nvm"
-
+export EDITOR=nvim
 
 Blue() {
     print -P "%F{blue}$@%f"
