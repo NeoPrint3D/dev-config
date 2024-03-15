@@ -90,7 +90,6 @@ plugins=(
     zsh-autosuggestions
     )
 
-source $ZSH/oh-my-zsh.sh
 
 eval "$(oh-my-posh init zsh --config $HOME/dev-config/theme.omp.json)"
 
@@ -137,11 +136,3 @@ load-nvmrc
 # bun completions
 [ -s "/home/drew/.bun/_bun" ] && source "/home/drew/.bun/_bun"
 . "$HOME/.cargo/env"
-
-# pnpm
-export PNPM_HOME="/home/drew/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
