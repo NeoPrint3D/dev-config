@@ -100,7 +100,8 @@ eval "$(oh-my-posh init zsh --config $HOME/dev-config/theme.omp.json)"
 alias zshconfig="code ~/.zshrc"
 alias ls="exa --icons"
 alias vim=nvim
-
+alias lzg=lazygit
+alias lzd=lazydocker
 
 
 # I want tab to auto complete with out having to hit enter
