@@ -9,13 +9,11 @@ local servers = {
   "cssls",
   "rust_analyzer",
   "pyright",
-  "tsserver",
   "clangd",
   "glsl_analyzer",
   "jsonls",
-  "tailwindcss",
   "bashls",
-  "jdtls"
+  "jdtls",
 }
 
 -- lsps with default config
@@ -27,3 +25,41 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- Add support for react, vue, and svelete, typescript
+lspconfig.tailwindcss.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+  filetypes = {
+    "html",
+    "css",
+    "scss",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "svelte",
+    "vue",
+  },
+}
+
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+  init_options = {
+    disableSuggestions = true,
+  },
+  commands = {
+    OrganizeImports = {
+      function()
+        local params = {
+          command = "_typescript.organizeImports",
+          arguments = { vim.api.nvim_buf_get_name(0) },
+          title = "",
+        }
+        vim.lsp.buf.execute_command(params)
+      end,
+    },
+  },
+}
