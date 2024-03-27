@@ -92,12 +92,11 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
 
 eval "$(oh-my-posh init zsh --config $HOME/dev-config/theme.omp.json)"
 
 
-alias zshconfig="code ~/.zshrc"
+alias config="cd ~/dev-config && vim"
 alias ls="exa --icons"
 alias vim=nvim
 alias lzg=lazygit

@@ -6,6 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export NVM_DIR="$HOME/.nvm"
 export EDITOR=nvim
 
+
 Blue() {
     print -P "%F{blue}$@%f"
 }
@@ -88,16 +89,18 @@ fi
 plugins=(
     git
     zsh-autosuggestions
-    )
+    zsh-syntax-highlighting
+)
 
 
 eval "$(oh-my-posh init zsh --config $HOME/dev-config/theme.omp.json)"
 
 
-alias zshconfig="code ~/.zshrc"
+alias config="cd ~/dev-config && vim"
 alias ls="exa --icons"
 alias vim=nvim
-
+alias lzg=lazygit
+alias lzd=lazydocker
 
 
 # I want tab to auto complete with out having to hit enter
