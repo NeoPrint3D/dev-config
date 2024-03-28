@@ -34,6 +34,7 @@ export QT_STYLE_OVERRIDE=kvantum
 # Set environment variables
 export ZSH="$HOME/.oh-my-zsh"
 export ZDOTDIR="$HOME/dev-config/linux/zsh"
+export GO_HOME="/usr/local/go"
 export BUN_INSTALL="$HOME/.bun"
 export DENO_INSTALL="/home/drew/.deno"
 export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64/"
@@ -44,6 +45,8 @@ export PATH="$PATH:$DENO_INSTALL/bin"
 export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$MAVEN_HOME/bin"
+export PATH="$PATH:$JAVA_HOME/bin"
+export PATH="$PATH:$GO_HOME/bin"
 export CAPACITOR_ANDROID_STUDIO_PATH="/opt/android-studio/bin/studio.sh"
 export EDITOR=nvim
 
