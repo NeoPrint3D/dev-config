@@ -12,6 +12,7 @@ local options = {
     json = { "prettierd", "prettier" },
     markdown = { "prettierd", "prettier" },
     yaml = { "prettierd", "prettier" },
+    sql = { "sqlfmt" },
   },
   format_on_save = {
     timeout_ms = 2000,

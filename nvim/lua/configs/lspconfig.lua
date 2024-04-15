@@ -14,6 +14,8 @@ local servers = {
   "jsonls",
   "bashls",
   "jdtls",
+  "emmet_ls",
+  "sqlls",
 }
 
 -- lsps with default config
@@ -43,23 +45,22 @@ lspconfig.tailwindcss.setup {
   },
 }
 
+local mason_registry = require "mason-registry"
+local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
+  .. "/node_modules/@vue/language-server"
+
 lspconfig.tsserver.setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
   init_options = {
-    disableSuggestions = true,
-  },
-  commands = {
-    OrganizeImports = {
-      function()
-        local params = {
-          command = "_typescript.organizeImports",
-          arguments = { vim.api.nvim_buf_get_name(0) },
-          title = "",
-        }
-        vim.lsp.buf.execute_command(params)
-      end,
+    plugins = {
+      {
+        name = "@vue/typescript-plugin",
+        location = vue_language_server_path,
+        languages = { "vue" },
+      },
     },
   },
+  filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 }
+
+-- No need to set `hybridMode` to `true` as it's the default value
+lspconfig.volar.setup {}
