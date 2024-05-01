@@ -37,15 +37,4 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
-
-vim.g.clipboard = {
-  name = "xclip",
-  copy = {
-    ["+"] = "xclip -selection clipboard",
-    ["*"] = "xclip -selection clipboard",
-  },
-  paste = {
-    ["+"] = "xclip -selection clipboard -o",
-    ["*"] = "xclip -selection clipboard -o",
-  },
-}
+vim.opt.clipboard = "unnamedplus"

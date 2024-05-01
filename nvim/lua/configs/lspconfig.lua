@@ -16,6 +16,7 @@ local servers = {
   "jdtls",
   "emmet_ls",
   "sqlls",
+  "jdtls",
 }
 
 -- lsps with default config

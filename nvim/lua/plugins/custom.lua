@@ -65,20 +65,5 @@ local plugins = {
     "github/copilot.vim",
     lazy = false,
   },
-  {
-    "neoclide/coc.nvim",
-    branch = "release",
-    lazy = true,
-    config = function() end,
-  },
-  {
-    "edluffy/hologram.nvim",
-    lazy = false,
-    config = function()
-      require("hologram").setup {
-        auto_display = true,
-      }
-    end,
-  },
 }
 return plugins
