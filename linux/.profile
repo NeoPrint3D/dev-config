@@ -1,4 +1,5 @@
 # Set environment variables
+export ZSH_HOME="$HOME/.oh-my-zsh"
 export NVM_HOME="$HOME/.nvm"
 export BUN_HOME="$HOME/.bun"
 export ANDROID_HOME="$HOME/drew/Android/Sdk/"

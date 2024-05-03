@@ -2,9 +2,8 @@ zsh ~/dev-config/linux/scripts/print-logo.zsh
 plugins=(
   zsh-syntax-highlighting
   zsh-autosuggestions
-
 )
-source $ZSH/oh-my-zsh.sh
+source $ZSH_HOME/oh-my-zsh.sh
 source ~/dev-config/linux/zsh/.zshenv
 eval "$(oh-my-posh init zsh --config $HOME/dev-config/theme.omp.json)"
 
