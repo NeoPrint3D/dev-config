@@ -24,7 +24,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # Compile some tools from build time
 sh ./packages/go.sh
 sh ./packages/nvim.sh
-go install https://github.com/jesseduffield/lazygit@latest
+go install github.com/jesseduffield/lazygit@latest
 source ~/.zshrc
 # Sync everything
 sh sync.sh
