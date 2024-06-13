@@ -9,7 +9,7 @@ eval "$(oh-my-posh init zsh --config $HOME/dev-config/theme.omp.json)"
 
 # defualt overrides
 alias ls="exa --icons"
-alias cat="bat --theme=Dracula"
+alias bat="batcat --theme=Dracula --plain --paging=never"
 alias vim=nvim
 # tuis aliases
 alias lzg=lazygit
@@ -21,3 +21,14 @@ alias sync="sh ~/dev-config/linux/scripts/sync.sh"
 alias upgrade="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 
 bindkey '\t' autosuggest-accept
+
+# bun completions
+[ -s "/home/drew/.bun/_bun" ] && source "/home/drew/.bun/_bun"
+
+# pnpm
+export PNPM_HOME="/home/drew/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
