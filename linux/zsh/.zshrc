@@ -19,7 +19,7 @@ alias config="cd ~/dev-config && vim"
 alias reload="source ~/.zshrc"
 alias sync="sh ~/dev-config/linux/scripts/sync.sh"
 alias upgrade="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
-
+alias omp-upgrade="sudo rm /usr/local/bin/oh-my-posh && curl -s https://ohmyposh.dev/install.sh | sudo bash -s -- -d /usr/local/bin"
 bindkey '\t' autosuggest-accept
 
 # bun completions
