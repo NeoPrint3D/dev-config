@@ -24,3 +24,6 @@ bindkey '\t' autosuggest-accept
 
 # bun completions
 [ -s "/home/neoprint3d/.bun/_bun" ] && source "/home/neoprint3d/.bun/_bun"
+
+# opencode
+export PATH=/home/drew/.opencode/bin:$PATH
