@@ -20,7 +20,9 @@ alias reload="source ~/.zshrc"
 alias sync="sh ~/dev-config/linux/scripts/sync.sh"
 alias upgrade="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 
-bindkey '\t' autosuggest-accept
-
 # bun completions
 [ -s "/home/neoprint3d/.bun/_bun" ] && source "/home/neoprint3d/.bun/_bun"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh" # This loads nvm
+[ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
