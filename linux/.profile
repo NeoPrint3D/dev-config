@@ -22,7 +22,7 @@ export PATH="$PATH:$BUN_HOME/bin"
 export PATH="$PATH:$DENO_INSTALL/bin"
 export PATH="$PATH:$CUDA_HOME/bin"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-export PATH="$PATH:/home/neoprint3d/osmedeus-base/binaries"
+export PATH="$PATH:$HOME/osmedeus-base/binaries"
 export CAPACITOR_ANDROID_STUDIO_PATH="/opt/android-studio/bin/studio.sh"
 
 export BAT_THEME="Catppuccin Macchiato"
