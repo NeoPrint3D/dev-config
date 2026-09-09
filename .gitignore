@@ -2,3 +2,4 @@
 .zsh_history
 *.bck
 .zsh_sessions
+.DS_Store

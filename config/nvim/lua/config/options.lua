@@ -21,3 +21,8 @@ vim.o.shellredir = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
 vim.o.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
 vim.o.shellquote = ""
 vim.o.shellxquote = ""
+
+-- Toggle lazydocker in a floating terminal
+vim.keymap.set("n", "<leader>ld", function()
+  LazyVim.terminal({ "lazydocker" }, { esc_esc = false, ctrl_hjkl = false })
+end, { desc = "Lazydocker" })

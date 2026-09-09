@@ -33,3 +33,6 @@ function yy() {
 
 # opencode
 export PATH=/Users/drew/.opencode/bin:$PATH
+
+# bun completions
+[ -s "/Users/drew/.bun/_bun" ] && source "/Users/drew/.bun/_bun"

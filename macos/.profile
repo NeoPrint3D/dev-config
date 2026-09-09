@@ -23,8 +23,8 @@ export PATH="$PATH:$DENO_INSTALL/bin"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH="$PATH:$HOME/osmedeus-base/binaries"
 export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 export CAPACITOR_ANDROID_STUDIO_PATH="/opt/android-studio/bin/studio.sh"
-
 [ -s "$BUN_HOME/_bun" ] && source "$BUN_HOME/_bun"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"                                       # This loads nvm

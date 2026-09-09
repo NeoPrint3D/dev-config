@@ -1,13 +1,22 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- Delete/change without yanking only when it helps most
+vim.keymap.set({ "n", "x" }, "d", '"_d', { desc = "Delete without yanking" })
+vim.keymap.set({ "n", "x" }, "D", '"_D', { desc = "Delete line without yanking" })
 
-vim.keymap.set({ "n", "v" }, "d", '"_d', { desc = "Delete without yanking" })
-vim.keymap.set({ "n", "v" }, "D", '"_D', { desc = "Delete line without yanking" })
-vim.keymap.set({ "n", "v" }, "c", '"_c', { desc = "Change without yanking" })
-vim.keymap.set({ "n", "v" }, "C", '"_C', { desc = "Change line without yanking" })
-vim.keymap.set({ "n", "v" }, "x", '"_x', { desc = "Delete char without yanking" })
-vim.keymap.set({ "n", "v" }, "s", '"_s', { desc = "Substitute without yanking" })
+-- Keep c/C ergonomic, but these are still very opinionated
+vim.keymap.set({ "n", "x" }, "c", '"_c', { desc = "Change without yanking" })
+vim.keymap.set({ "n", "x" }, "C", '"_C', { desc = "Change line without yanking" })
 
--- Visual mode paste without overwriting your clipboard with the replaced text
-vim.keymap.set("v", "p", '"_dP', { desc = "Paste over without yanking" })
+-- Make x ergonomic without affecting operator-pending behavior
+vim.keymap.set("n", "x", '"_x', { desc = "Delete char without yanking" })
+
+-- Keep substitute ergonomic, but note this is a strong remap
+vim.keymap.set("n", "s", '"_s', { desc = "Substitute without yanking" })
+
+-- Visual paste without overwriting clipboard
+vim.keymap.set("x", "p", '"_dP', { desc = "Paste over without yanking" })
+
+-- Ask pi with the current buffer as context
+vim.keymap.set("n", "<leader>ai", ":PiAsk<CR>", { desc = "Ask pi" })
+
+-- Ask pi with visual selection as context
+vim.keymap.set("v", "<leader>ai", ":PiAskSelection<CR>", { desc = "Ask pi (selection)" })
